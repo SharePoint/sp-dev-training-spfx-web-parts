@@ -11,6 +11,8 @@ In this lab you work with the SharePoint Framework to create a client-side web p
 ## Demos
 
 - [Creating a SharePoint Framework Client-Side Web Part](./Demos/01-webpart)
+- [Testing with the local and hosted SharePoint Workbench](./Demos/02-testing)
+- [Exploring the SharePoint Framework API](./Demos/03-spfxapi)
 
 ## Contributors
 
@@ -23,7 +25,7 @@ In this lab you work with the SharePoint Framework to create a client-side web p
 
 | Version |        Date        |             Comments             |
 | ------- | ------------------ | -------------------------------- |
-| 1.1     | September 28, 2018 | Rewritten to use latest guidance |
+| 1.1     | September 21, 2018 | Rewritten to use latest guidance |
 | 1.0     | ~February 2017     | Initial release                  |
 
 ## Disclaimer
