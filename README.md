@@ -14,6 +14,10 @@ In this lab you work with the SharePoint Framework to create a client-side web p
 - [Testing with the local and hosted SharePoint Workbench](./Demos/02-testing)
 - [Exploring the SharePoint Framework API](./Demos/03-spfxapi)
 
+## Watch the Module
+
+This module has been recorded and is available in the Office Development YouTube channel: [SharePoint Framework Training - Developing with the SharePoint Framework: Web Parts](https://www.youtube.com/watch?v=m1l_sgSwKek&list=PLR9nK3mnD-OV-RPXQ3Lco845qoEy7VJoc)
+
 ## Contributors
 
 |        Roles         |                        Author(s)                        |
