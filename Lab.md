@@ -187,6 +187,8 @@ In this exercise you will work with the two different versions of the SharePoint
 
     Notice after saving the file, while the console displays a lot of commands, the browser that is displaying the hosted workbench does not automatically reload. This is expected. You can still refresh the page to see the updated web part, but the local web server cannot cause the hosted workbench to refresh.
 
+1. Close both the local and hosted workbench and stop the local web server by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the command prompt.
+
 ### The different modes of the gulp serve task
 
 The gulp **serve** task that you have run so far has automatically opened the local workbench. But there may be cases where you do not want to launch the local workbench and rather, you want to test with the hosted workbench. In these scenarios, you have two options.
@@ -200,6 +202,7 @@ The gulp **serve** task that you have run so far has automatically opened the lo
 1. In this case the gulp **serve** task will run just like normal and start the local webserver, but it will not launch the browser.
 1. Open a browser and navigate to one of your SharePoint Online sites and append the following to the end of the root site's URL: **/_layouts/workbench.aspx**.
 1. Notice the web part is appearing in the toolbox. Everything still works, you just don't get the default browser!
+1. Close the hosted workbench and stop the local web server by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the command prompt.
 
 But what if you want the browser to open the hosted workbench automatically for you? In that case, you can use a configuration setting to tell the gulp **serve** task what to do.
 

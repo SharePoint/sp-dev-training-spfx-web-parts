@@ -9,10 +9,10 @@
   },
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://localhost:4321/temp/workbench.html"
+      "pageUrl": "https://robwindsortest993.sharepoint.com/_layouts/workbench.aspx"
     },
     "myConfig": {
-      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/_layouts/workbench.aspx"
+      "pageUrl": "https://robwindsortest993.sharepoint.com/_layouts/workbench.aspx"
     }
-  }
+  }  
 }
