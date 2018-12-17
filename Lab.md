@@ -364,7 +364,7 @@ The SharePoint Framework also provides a way log messages to the console with ad
     Log.verbose('HelloWorld', 'VERBOSE message', this.context.serviceScope);
     ```
 
-1. Go back to the browser and open your browser's developer tools.
+1. Go back to the browser tab containing the local workbench and open your browser's developer tools.
 1. Open the **Console** tab (*it may have a slightly different name depending on the browser you are using*).
 1. There will be a lot of messages logged to the console, so use the filter technique to filter based on the name of your web part, **HelloWorld**.
 1. Notice in the following image that each message is prefixed with the unique name of the web part.

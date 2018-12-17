@@ -1,10 +1,11 @@
-import { 
+import {
   Version,
-  DisplayMode, 
-  Environment, 
-  EnvironmentType, 
-  Log 
+  DisplayMode,
+  Environment,
+  EnvironmentType,
+  Log
 } from '@microsoft/sp-core-library';
+
 import {
   BaseClientSideWebPart,
   IPropertyPaneConfiguration,
@@ -22,37 +23,40 @@ export interface IHelloWorldWebPartProps {
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
 
   public render(): void {
-
-    const pageMode : string = this.displayMode === DisplayMode.Edit ? 'You are in edit mode' : 'You are in read mode';
-    const environmentType : string = Environment.type === EnvironmentType.Local ? 'You are in local environment' : 'You are in sharepoint environment';
+    const pageMode: string = (this.displayMode === DisplayMode.Edit)
+      ? 'You are in edit mode'
+      : 'You are in read mode';
+    const environmentType: string = (Environment.type === EnvironmentType.Local)
+      ? 'You are in local environment'
+      : 'You are in SharePoint environment';
 
     this.context.statusRenderer.displayLoadingIndicator(this.domElement, "message");
     setTimeout(() => {
       this.context.statusRenderer.clearLoadingIndicator(this.domElement);
-
       this.domElement.innerHTML = `
-        <div class="${ styles.helloWorld }">
-          <div class="${ styles.container }">
-            <div class="${ styles.row }">
-              <div class="${ styles.column }">
-                <span class="${ styles.title }">Welcome to SharePoint!</span>
-                <p class="${ styles.subTitle }"><strong>Page mode:</strong> ${ pageMode }</p>
-                <p class="${ styles.subTitle }"><strong>Environment:</strong> ${ environmentType }</p>
-                <p class="${ styles.description }">${escape(this.properties.description)}</p>
-                <a href="#" class="${ styles.button }">
-                  <span class="${ styles.label }">Learn more</span>
-                </a>
-              </div>
+      <div class="${ styles.helloWorld}">
+        <div class="${ styles.container}">
+          <div class="${ styles.row}">
+            <div class="${ styles.column}">
+              <span class="${ styles.title}">Welcome to SharePoint!</span>
+              <p class="${ styles.subTitle}">Customize SharePoint experiences using Web Parts.</p>
+              <p class="${ styles.subTitle}"><strong>Page mode:</strong> ${pageMode}</p>
+              <p class="${ styles.subTitle}"><strong>Environment:</strong> ${environmentType}</p>              
+              <p class="${ styles.description}">${escape(this.properties.description)}</p>
+              <a href="#" class="${ styles.button}">
+                <span class="${ styles.label}">Learn more</span>
+              </a>
             </div>
           </div>
-        </div>`;
+        </div>
+      </div>`;
     }, 5000);
 
-    this.domElement.getElementsByClassName(`${ styles.button }`)[0]
-      .addEventListener('click', (event: any) => {
-        event.preventDefault();
-        alert('Welcome to the SharePoint Framework!');
-      });
+    this.domElement.getElementsByClassName(`${styles.button}`)[0]
+    .addEventListener('click', (event: any) => {
+      event.preventDefault();
+      alert('Welcome to the SharePoint Framework!');
+    });
 
     Log.info('HelloWorld', 'message', this.context.serviceScope);
     Log.warn('HelloWorld', 'WARNING message', this.context.serviceScope);
