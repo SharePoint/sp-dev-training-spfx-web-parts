@@ -257,6 +257,8 @@ But what if you want the browser to open the hosted workbench automatically for 
 
     You can use multiple configurations for different sites if you like. This will be useful when you test SharePoint Framework extensions.
 
+1. Close the hosted workbench and stop the local web server by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the command prompt.
+
 <a name="exercise3"></a>
 
 ## Exercise 3: Exploring the SharePoint Framework API

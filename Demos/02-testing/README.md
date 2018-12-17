@@ -100,3 +100,5 @@ But what if you want the browser to open the hosted workbench automatically for 
 1. Notice the browser will now load, but it will also navigate to you to your hosted workbench in SharePoint Online.
 
     You can use multiple configurations for different sites if you like. This will be useful when you test SharePoint Framework extensions.
+
+1. Close the hosted workbench and stop the local web server by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the command prompt.
