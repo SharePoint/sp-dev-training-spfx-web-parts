@@ -308,10 +308,10 @@ In this exercise you will explore a few different APIs available to you in the S
 1. Let's test the web part to see what we get. Start the local web server using the provided gulp **serve** task:
 
     ```shell
-    gulp serve --nobrowser
+    gulp serve
     ```
 
-1. When the browser loads the local workbench, add the web part to he page. Notice the values of the page mode & environment type:
+1. When the browser loads the local workbench, add the web part to the page. Notice the values of the page mode & environment type:
 
     ![Screenshot of the SharePoint local workbench](./Images/ex03-webpart-01.png)
 
