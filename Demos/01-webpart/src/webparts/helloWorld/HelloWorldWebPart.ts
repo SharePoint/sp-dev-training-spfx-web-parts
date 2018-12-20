@@ -33,10 +33,10 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
       </div>`;
 
       this.domElement.getElementsByClassName(`${ styles.button }`)[0]
-        .addEventListener('click', (event: any) => {
-          event.preventDefault();
-          alert('Welcome to the SharePoint Framework!');
-        });
+      .addEventListener('click', (event: any) => {
+        event.preventDefault();
+        alert('Welcome to the SharePoint Framework!');
+      });      
   }
 
   protected get dataVersion(): Version {

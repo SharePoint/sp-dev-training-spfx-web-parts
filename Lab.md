@@ -36,6 +36,7 @@ In this exercise you will create a SharePoint Framework client-side web part.
     - **Which baseline packages do you want to target for your component(s)?**: SharePoint Online only (latest)
     - **Where do you want to place the files?**: Use the current folder
     - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?**: No
+    - **Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant?**: No    
     - **Which type of client-side component to create?**: WebPart
     - **What is your Web part name?**: HelloWorld
     - **What is your Web part description?**: HelloWorld description
@@ -186,6 +187,8 @@ In this exercise you will work with the two different versions of the SharePoint
 
     Notice after saving the file, while the console displays a lot of commands, the browser that is displaying the hosted workbench does not automatically reload. This is expected. You can still refresh the page to see the updated web part, but the local web server cannot cause the hosted workbench to refresh.
 
+1. Close both the local and hosted workbench and stop the local web server by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the command prompt.
+
 ### The different modes of the gulp serve task
 
 The gulp **serve** task that you have run so far has automatically opened the local workbench. But there may be cases where you do not want to launch the local workbench and rather, you want to test with the hosted workbench. In these scenarios, you have two options.
@@ -199,6 +202,7 @@ The gulp **serve** task that you have run so far has automatically opened the lo
 1. In this case the gulp **serve** task will run just like normal and start the local webserver, but it will not launch the browser.
 1. Open a browser and navigate to one of your SharePoint Online sites and append the following to the end of the root site's URL: **/_layouts/workbench.aspx**.
 1. Notice the web part is appearing in the toolbox. Everything still works, you just don't get the default browser!
+1. Close the hosted workbench and stop the local web server by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the command prompt.
 
 But what if you want the browser to open the hosted workbench automatically for you? In that case, you can use a configuration setting to tell the gulp **serve** task what to do.
 
@@ -252,6 +256,8 @@ But what if you want the browser to open the hosted workbench automatically for 
 1. Notice the browser will now load, but it will also navigate to you to your hosted workbench in SharePoint Online.
 
     You can use multiple configurations for different sites if you like. This will be useful when you test SharePoint Framework extensions.
+
+1. Close the hosted workbench and stop the local web server by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the command prompt.
 
 <a name="exercise3"></a>
 
@@ -308,10 +314,10 @@ In this exercise you will explore a few different APIs available to you in the S
 1. Let's test the web part to see what we get. Start the local web server using the provided gulp **serve** task:
 
     ```shell
-    gulp serve --nobrowser
+    gulp serve
     ```
 
-1. When the browser loads the local workbench, add the web part to he page. Notice the values of the page mode & environment type:
+1. When the browser loads the local workbench, add the web part to the page. Notice the values of the page mode & environment type:
 
     ![Screenshot of the SharePoint local workbench](./Images/ex03-webpart-01.png)
 
@@ -358,7 +364,7 @@ The SharePoint Framework also provides a way log messages to the console with ad
     Log.verbose('HelloWorld', 'VERBOSE message', this.context.serviceScope);
     ```
 
-1. Go back to the browser and open your browser's developer tools.
+1. Go back to the browser tab containing the local workbench and open your browser's developer tools.
 1. Open the **Console** tab (*it may have a slightly different name depending on the browser you are using*).
 1. There will be a lot of messages logged to the console, so use the filter technique to filter based on the name of your web part, **HelloWorld**.
 1. Notice in the following image that each message is prefixed with the unique name of the web part.
