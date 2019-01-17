@@ -16,7 +16,7 @@ In this lab you work with the SharePoint Framework to create a client-side web p
 
 ## Watch the Module
 
-This module has been recorded and is available in the Office Development YouTube channel: [SharePoint Framework Training - Developing with the SharePoint Framework: Web Parts](https://www.youtube.com/watch?v=m1l_sgSwKek&list=PLR9nK3mnD-OV-RPXQ3Lco845qoEy7VJoc)
+This module has been recorded and is available in the SharePoint Development YouTube channel: [SharePoint Framework Training - Developing with the SharePoint Framework: Web Parts](https://www.youtube.com/watch?v=m1l_sgSwKek&list=PLR9nK3mnD-OV-RPXQ3Lco845qoEy7VJoc)
 
 ## Contributors
 
