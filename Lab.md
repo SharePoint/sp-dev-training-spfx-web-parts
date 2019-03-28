@@ -36,7 +36,6 @@ In this exercise you will create a SharePoint Framework client-side web part.
     - **Which baseline packages do you want to target for your component(s)?**: SharePoint Online only (latest)
     - **Where do you want to place the files?**: Use the current folder
     - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?**: No
-    - **Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant?**: No    
     - **Which type of client-side component to create?**: WebPart
     - **What is your Web part name?**: HelloWorld
     - **What is your Web part description?**: HelloWorld description
@@ -390,13 +389,7 @@ At times your web part may have a number of calculations to perform or have a de
       this.context.statusRenderer.clearLoadingIndicator(this.domElement);
     ```
 
-1. Locate the closing quote for the HTML written to the web part's `<div>` `innerHTML` property:
-
-    ```ts
-    </div>`;
-    ```
-
-1. Add the following line just after the above line:
+1. Add the following line just after the code that attaches the event handler to the button:
 
     ```ts
     }, 5000);
@@ -432,13 +425,13 @@ At times your web part may have a number of calculations to perform or have a de
               </div>
             </div>
           </div>`;
-      }, 5000);
 
-      this.domElement.getElementsByClassName(`${ styles.button }`)[0]
-        .addEventListener('click', (event: any) => {
-          event.preventDefault();
-          alert('Welcome to the SharePoint Framework!');
-        });
+        this.domElement.getElementsByClassName(`${styles.button}`)[0]
+          .addEventListener('click', (event: any) => {
+            event.preventDefault();
+            alert('Welcome to the SharePoint Framework!');
+          });
+      }, 5000);
 
       Log.info('HelloWorld', 'message', this.context.serviceScope);
       Log.warn('HelloWorld', 'WARNING message', this.context.serviceScope);
