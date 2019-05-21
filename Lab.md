@@ -102,7 +102,7 @@ In this exercise you will create a SharePoint Framework client-side web part.
           });
         ```
 
-1. Go back to the browser to test your changes. The browser should have refreshed the changes you made.
+1. Save your changes. In a second or two the browser should automatically refresh so that you can test them.
 1. Click the **Learn More** button.
 
     Notice the button triggers a JavaScript alert displaying the message you added in the above code.
@@ -111,7 +111,7 @@ In this exercise you will create a SharePoint Framework client-side web part.
 
 ### Update the web part's properties
 
-Now make some changes to the web part's properties to give it a new name, description and icon.
+Now change the properties of the web part to give it a new name, description and icon.
 
 1. The web part's metadata is found in it's manifest file.
 
