@@ -2,6 +2,8 @@
 
 In this exercise you will create a SharePoint Framework client-side web part.
 
+> NOTE: The instructions below assume you are using v1.8.2 of the SharePoint Framework Yeoman generator. 
+
 1. Open a command prompt and change to the folder where you want to create the project.
 1. Run the SharePoint Yeoman generator by executing the following command:
 
@@ -15,6 +17,7 @@ In this exercise you will create a SharePoint Framework client-side web part.
     - **Which baseline packages do you want to target for your component(s)?**: SharePoint Online only (latest)
     - **Where do you want to place the files?**: Use the current folder
     - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?**: No
+    - **Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant?** No    
     - **Which type of client-side component to create?**: WebPart
     - **What is your Web part name?**: HelloWorld
     - **What is your Web part description?**: HelloWorld description
@@ -78,7 +81,7 @@ In this exercise you will create a SharePoint Framework client-side web part.
           });
         ```
 
-1. Go back to the browser to test your changes. The browser should have refreshed the changes you made.
+1. Save your changes. In a second or two the browser should automatically refresh so that you can test them.
 1. Click the **Learn More** button.
 
     Notice the button triggers a JavaScript alert displaying the message you added in the above code.
@@ -87,7 +90,7 @@ In this exercise you will create a SharePoint Framework client-side web part.
 
 ## Update the web part's properties
 
-Now make some changes to the web part's properties to give it a new name, description and icon.
+Now change the properties of the web part to give it a new name, description and icon.
 
 1. The web part's metadata is found in it's manifest file.
 
