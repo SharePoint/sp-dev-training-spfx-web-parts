@@ -2,11 +2,23 @@
 
 This module will introduce you to creating client-side web parts using the SharePoint Framework. In addition, you will see how to leverage both the local and hosted SharePoint Workbench & using different parts of the SharePoint Framework API.
 
+> This module is also published as a Microsoft Learn module: [Developing with the SharePoint Framework: Web Parts](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-part)
+
 ## Lab - Developing with the SharePoint Framework: Web Parts
 
-In this lab you work with the SharePoint Framework to create a client-side web part and leverage different parts of the SharePoint Framework API.
+The lab for this module is available in multiple units within the associated Microsoft Learn module. Use the following links to jump to the specific unit. Each Microsoft Learn unit represents a different lab exercise & demo in the presentation.
 
-- [Lab manual](./Lab.md)
+1. [Exercise - Create a SharePoint Framework client-side web part](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts/3-exercise-create-web-part)
+
+    In this exercise, you'll create a SharePoint Framework client-side web part.
+
+1. [Exercise - Testing with the local and hosted SharePoint Workbench](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts/5-exercise-test-workbench)
+
+    In this exercise, you'll work with the two different versions of the SharePoint Workbench: the local & hosted workbench, as well as the different modes of the built-in gulp serve task.
+
+1. [Exercise - Exploring the SharePoint Framework API](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts/7-exercise-spfx-api)
+
+    In this exercise, you'll explore a few different APIs available to you in the SharePoint Framework that are useful in many scenarios.
 
 ## Demos
 
@@ -20,23 +32,24 @@ This module has been recorded and is available in the SharePoint Development You
 
 ## Contributors
 
-| Roles                | Author(s)                                               |
-| -------------------- | ------------------------------------------------------- |
-| Lab Manuals / Slides | Andrew Connell (Microsoft MVP, Voitanos) [@andrewconnell](//github.com/andrewconnell) |
-| QA                   | Rob Windsor (Microsoft MVP, PAIT Group) [@rob-windsor](//github.com/rob-windsor)      |
-| Sponsor / Support    | Vesa Juvonen (Microsoft) [@VesaJuvonen](//github.com/VesaJuvonen)                     |
+|        Roles         |                                                   Author(s)                                                    |
+| -------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Lab Manuals / Slides | Andrew Connell (Microsoft MVP, [Voitanos](//github.com/voitanos)) [@andrewconnell](//github.com/andrewconnell) |
+| QA                   | Rob Windsor (Microsoft MVP, PAIT Group) [@rob-windsor](//github.com/rob-windsor)                               |
+| Sponsor / Support    | Vesa Juvonen (Microsoft) [@VesaJuvonen](//github.com/VesaJuvonen)                                              |
 
 ## Version history
 
-| Version |        Date        |             Comments             |
-| ------- | ------------------ | -------------------------------- |
-| 1.6     | December 6, 2019   | 2020Q2 content refresh           |
-| 1.5     | September 2, 2019  | 2020Q1 content refresh           |
-| 1.4     | May 24, 2019       | 2019Q4 content refresh           |
-| 1.3     | March 6, 2019      | 2019Q3 content refresh           |
-| 1.2     | December 17, 2018  | 2019Q2 content refresh           |
-| 1.1     | September 21, 2018 | Rewritten to use latest guidance |
-| 1.0     | ~February 2017     | Initial release                  |
+| Version |        Date        |                      Comments                      |
+| ------- | ------------------ | -------------------------------------------------- |
+| 1.7     | March 10, 2020     | FY2020Q3 content refresh & port module to MS Learn |
+| 1.6     | December 6, 2019   | FY2020Q2 content refresh                           |
+| 1.5     | September 2, 2019  | FY2020Q1 content refresh                           |
+| 1.4     | May 24, 2019       | FY2019Q4 content refresh                           |
+| 1.3     | March 6, 2019      | FY2019Q3 content refresh                           |
+| 1.2     | December 17, 2018  | FY2019Q2 content refresh                           |
+| 1.1     | September 21, 2018 | Rewritten to use latest guidance                   |
+| 1.0     | ~February 2017     | Initial release                                    |
 
 ## Disclaimer
 

@@ -8,12 +8,11 @@ import {
   EnvironmentType,
   Log
 } from '@microsoft/sp-core-library';
-
 import {
-  BaseClientSideWebPart,
   IPropertyPaneConfiguration,
   PropertyPaneTextField
-} from '@microsoft/sp-webpart-base';
+} from '@microsoft/sp-property-pane';
+import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { escape } from '@microsoft/sp-lodash-subset';
 
 import styles from './HelloWorldWebPart.module.scss';
@@ -36,7 +35,6 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
     this.context.statusRenderer.displayLoadingIndicator(this.domElement, "message");
     setTimeout(() => {
       this.context.statusRenderer.clearLoadingIndicator(this.domElement);
-
       this.domElement.innerHTML = `
         <div class="${ styles.helloWorld}">
           <div class="${ styles.container}">
@@ -44,7 +42,8 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
               <div class="${ styles.column}">
                 <span class="${ styles.title}">Welcome to SharePoint!</span>
                 <p class="${ styles.subTitle}"><strong>Page mode:</strong> ${pageMode}</p>
-                <p class="${ styles.subTitle}"><strong>Environment:</strong> ${environmentType}</p>
+                <p class="${ styles.subTitle}"><strong>Environment:</strong> ${environmentType}</p>              
+                <p class="${ styles.subTitle}">Customize SharePoint experiences using Web Parts.</p>
                 <p class="${ styles.description}">${escape(this.properties.description)}</p>
                 <a href="#" class="${ styles.button}">
                   <span class="${ styles.label}">Learn more</span>

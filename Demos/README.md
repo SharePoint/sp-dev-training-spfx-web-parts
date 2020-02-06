@@ -1,6 +1,6 @@
 # Microsoft SharePoint Framework Training Module - Developing with the SharePoint Framework: Web Parts
 
-This folder contains demos for the SharePoint Framework training module on Developing with the SharePoint Framework: Web Parts.
+This folder contains demos associated with the slide decks in this module.
 
 ## Demos
 
