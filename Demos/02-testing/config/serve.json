@@ -1,21 +1,10 @@
 {
-  // Copyright (c) Microsoft Corporation. All rights reserved.
-  // Licensed under the MIT license.
-
   "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
   "port": 4321,
   "https": true,
-  "initialPage": "https://localhost:5432/workbench",
+  "initialPage": "https://contoso.sharepoint.com/sites/mySite/_layouts/workbench.aspx",
   "api": {
     "port": 5432,
     "entryPath": "node_modules/@microsoft/sp-webpart-workbench/lib/api/"
-  },
-  "serveConfigurations": {
-    "default": {
-      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/_layouts/workbench.aspx"
-    },
-    "myConfig": {
-      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/_layouts/workbench.aspx"
-    }
   }
 }
