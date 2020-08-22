@@ -1,6 +1,3 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT license.
-
 import {
   Version,
   DisplayMode,
@@ -42,7 +39,7 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
               <div class="${ styles.column}">
                 <span class="${ styles.title}">Welcome to SharePoint!</span>
                 <p class="${ styles.subTitle}"><strong>Page mode:</strong> ${pageMode}</p>
-                <p class="${ styles.subTitle}"><strong>Environment:</strong> ${environmentType}</p>              
+                <p class="${ styles.subTitle}"><strong>Environment:</strong> ${environmentType}</p>
                 <p class="${ styles.subTitle}">Customize SharePoint experiences using Web Parts.</p>
                 <p class="${ styles.description}">${escape(this.properties.description)}</p>
                 <a href="#" class="${ styles.button}">

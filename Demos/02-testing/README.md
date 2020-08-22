@@ -1,6 +1,6 @@
 # DEMO: Testing with the local and hosted SharePoint Workbench
 
-This completed project is the result of the lab exercise **Testing with the local and hosted SharePoint Workbench** that is referenced in the [README](../../) in this repo.
+This completed project is the result of the lab exercise **Testing with the local and hosted SharePoint Workbench** that is referenced in the [README](../../README.md) in this repo.
 
 ## Prerequisites
 
