@@ -2,7 +2,7 @@
 
 This module will introduce you to creating client-side web parts using the SharePoint Framework. In addition, you will see how to leverage both the local and hosted SharePoint Workbench & using different parts of the SharePoint Framework API.
 
-> This module is also published as a Microsoft Learn module: [Developing with the SharePoint Framework: Web Parts](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-part)
+> This module is also published as a Microsoft Learn module: [Developing with the SharePoint Framework: Web Parts](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts)
 
 ## Lab - Developing with the SharePoint Framework: Web Parts
 
@@ -16,7 +16,7 @@ The lab for this module is available in multiple units within the associated Mic
 
     In this exercise, you'll work with the two different versions of the SharePoint Workbench: the local & hosted workbench, as well as the different modes of the built-in gulp serve task.
 
-1. [Exercise - Exploring the SharePoint Framework API](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts/7-exercise-spfx-api)
+1. [Exercise - Exploring the SharePoint Framework API](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts/7-exercise-api)
 
     In this exercise, you'll explore a few different APIs available to you in the SharePoint Framework that are useful in many scenarios.
 
@@ -42,6 +42,7 @@ This module has been recorded and is available in the SharePoint Development You
 
 | Version |        Date        |                      Comments                      |
 | ------- | ------------------ | -------------------------------------------------- |
+| 1.8     | August 31, 2020    | FY2021Q1 content refresh                           |
 | 1.7     | March 10, 2020     | FY2020Q3 content refresh & port module to MS Learn |
 | 1.6     | December 6, 2019   | FY2020Q2 content refresh                           |
 | 1.5     | September 2, 2019  | FY2020Q1 content refresh                           |

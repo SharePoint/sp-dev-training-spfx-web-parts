@@ -1,7 +1,4 @@
 {
-  // Copyright (c) Microsoft Corporation. All rights reserved.
-  // Licensed under the MIT license.
-
   "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
   "port": 4321,
   "https": true,
