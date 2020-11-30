@@ -1,6 +1,6 @@
-# DEMO: Create a SharePoint Framework client-side web part
+# DEMO: Creating a SharePoint Framework Client-Side Web Part
 
-This completed project is the result of the lab exercise **Create a SharePoint Framework client-side web part** that is referenced in the [README](../../README.md) in this repo.
+This completed project is the result of the lab exercise **Creating a SharePoint Framework Client-Side Web Part** that is referenced in the [README](../../README.md) in this repo.
 
 ## Prerequisites
 

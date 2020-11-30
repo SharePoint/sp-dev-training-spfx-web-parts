@@ -4,7 +4,7 @@
     "environment": "spo",
     "version": "1.11.0",
     "libraryName": "hello-world",
-    "libraryId": "71f46d98-fb4d-43ab-b980-2a75e2c87904",
+    "libraryId": "1c3946a5-450f-404e-bcdb-b4fd83680920",
     "packageManager": "npm",
     "isDomainIsolated": false,
     "componentType": "webpart"
