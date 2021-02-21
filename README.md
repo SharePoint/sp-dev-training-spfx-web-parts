@@ -42,6 +42,7 @@ This module has been recorded and is available in the SharePoint Development You
 
 | Version |        Date        |                      Comments                      |
 | ------- | ------------------ | -------------------------------------------------- |
+| 1.10    | March 6, 2021      | FY2021Q3 content refresh                           |
 | 1.9     | November 30, 2020  | FY2021Q2 content refresh                           |
 | 1.8     | August 31, 2020    | FY2021Q1 content refresh                           |
 | 1.7     | March 10, 2020     | FY2020Q3 content refresh & port module to MS Learn |
