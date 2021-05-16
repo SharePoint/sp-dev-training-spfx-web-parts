@@ -58,6 +58,7 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
           event.preventDefault();
           alert('Welcome to the SharePoint Framework!');
         });
+
     }, 5000);
 
     Log.info('HelloWorld', 'message', this.context.serviceScope);
