@@ -4,8 +4,6 @@
 import {
   Version,
   DisplayMode,
-  Environment,
-  EnvironmentType,
   Log
 } from '@microsoft/sp-core-library';
 import {
@@ -25,12 +23,10 @@ export interface IHelloWorldWebPartProps {
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
 
   public render(): void {
+    const siteTitle: string = this.context.pageContext.web.title;
     const pageMode: string = (this.displayMode === DisplayMode.Edit)
       ? 'You are in edit mode'
       : 'You are in read mode';
-    const environmentType: string = (Environment.type === EnvironmentType.Local)
-      ? 'You are in local environment'
-      : 'You are in SharePoint environment';
 
     this.context.statusRenderer.displayLoadingIndicator(this.domElement, "message");
     setTimeout(() => {
@@ -41,8 +37,8 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
             <div class="${styles.row}">
               <div class="${styles.column}">
                 <span class="${styles.title}">Welcome to SharePoint!</span>
+                <p class="${styles.subTitle}"><strong>Site title:</strong> ${siteTitle}</p>
                 <p class="${styles.subTitle}"><strong>Page mode:</strong> ${pageMode}</p>
-                <p class="${styles.subTitle}"><strong>Environment:</strong> ${environmentType}</p>
                 <p class="${styles.subTitle}">Customize SharePoint experiences using Web Parts.</p>
                 <p class="${styles.description}">${escape(this.properties.description)}</p>
                 <a href="#" class="${styles.button}">
@@ -58,6 +54,7 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
           event.preventDefault();
           alert('Welcome to the SharePoint Framework!');
         });
+
     }, 5000);
 
     Log.info('HelloWorld', 'message', this.context.serviceScope);
