@@ -19,12 +19,15 @@ export interface IHelloWorldWebPartProps {
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
 
   public render(): void {
+    const siteTitle : string = this.context.pageContext.web.title;
+
     this.domElement.innerHTML = `
       <div class="${styles.helloWorld}">
         <div class="${styles.container}">
           <div class="${styles.row}">
             <div class="${styles.column}">
               <span class="${styles.title}">Welcome to SharePoint!</span>
+              <p class="${ styles.subTitle }"><strong>Site title:</strong> ${ siteTitle }</p>
               <p class="${styles.subTitle}">Customize SharePoint experiences using Web Parts.</p>
               <p class="${styles.description}">${escape(this.properties.description)}</p>
               <a href="#" class="${styles.button}">
