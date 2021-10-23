@@ -29,9 +29,9 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
     const pageMode: string = (this.displayMode === DisplayMode.Edit)
       ? 'You are in edit mode'
       : 'You are in read mode';
-    const environmentType : string = (Environment.type === EnvironmentType.ClassicSharePoint)
+    const environmentType: string = (Environment.type === EnvironmentType.ClassicSharePoint)
       ? 'You are running in a classic page'
-      : 'You are running in a modern page';       
+      : 'You are running in a modern page';
 
     this.context.statusRenderer.displayLoadingIndicator(this.domElement, "message");
     setTimeout(() => {
@@ -44,7 +44,7 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
                 <span class="${styles.title}">Welcome to SharePoint!</span>
                 <p class="${styles.subTitle}"><strong>Site title:</strong> ${siteTitle}</p>
                 <p class="${styles.subTitle}"><strong>Page mode:</strong> ${pageMode}</p>
-                <p class="${ styles.subTitle }"><strong>Environment:</strong> ${ environmentType }</p>
+                <p class="${styles.subTitle}"><strong>Environment:</strong> ${environmentType}</p>
                 <p class="${styles.subTitle}">Customize SharePoint experiences using Web Parts.</p>
                 <p class="${styles.description}">${escape(this.properties.description)}</p>
                 <a href="#" class="${styles.button}">
@@ -60,7 +60,6 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
           event.preventDefault();
           alert('Welcome to the SharePoint Framework!');
         });
-
     }, 5000);
 
     Log.info('HelloWorld', 'message', this.context.serviceScope);
