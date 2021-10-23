@@ -1,6 +1,6 @@
 # Microsoft SharePoint Framework Training Module - Developing with the SharePoint Framework: Web Parts
 
-This module will introduce you to creating client-side web parts using the SharePoint Framework. In addition, you will see how to leverage both the local and hosted SharePoint Workbench & using different parts of the SharePoint Framework API.
+This module will introduce you to creating client-side web parts using the SharePoint Framework. In addition, you will see how to leverage the SharePoint-hosted Workbench and use different parts of the SharePoint Framework API.
 
 > This module is also published as a Microsoft Learn module: [Developing with the SharePoint Framework: Web Parts](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts)
 
@@ -12,9 +12,9 @@ The lab for this module is available in multiple units within the associated Mic
 
     In this exercise, you'll create a SharePoint Framework client-side web part.
 
-1. [Exercise - Testing with the local and hosted SharePoint Workbench](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts/5-exercise-test-workbench)
+1. [Exercise - Testing with the SharePoint-hosted Workbench](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts/5-exercise-test-workbench)
 
-    In this exercise, you'll work with the two different versions of the SharePoint Workbench: the local & hosted workbench, as well as the different modes of the built-in gulp serve task.
+    In this exercise, you'll test your web part in the hosted workbench, and you will explore the different modes of the built-in gulp serve task.
 
 1. [Exercise - Exploring the SharePoint Framework API](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts/7-exercise-api)
 
@@ -23,7 +23,7 @@ The lab for this module is available in multiple units within the associated Mic
 ## Demos
 
 - [Creating a SharePoint Framework Client-Side Web Part](./Demos/01-webpart)
-- [Testing with the local and hosted SharePoint Workbench](./Demos/02-testing)
+- [Testing with the SharePoint-hosted Workbench](./Demos/02-testing)
 - [Exploring the SharePoint Framework API](./Demos/03-spfxapi)
 
 ## Watch the Module - Video
