@@ -5,7 +5,7 @@ This folder contains demos associated with the slide decks in this module.
 ## Demos
 
 - [Creating a SharePoint Framework Client-Side Web Part](./01-webpart)
-- [Testing with the local and hosted SharePoint Workbench](./02-testing)
+- [Testing with the SharePoint-hosted Workbench](./02-testing)
 - [Exploring the SharePoint Framework API](./03-spfxapi)
 
 ## Running demonstrations
