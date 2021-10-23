@@ -17,7 +17,7 @@ export interface IHelloWorldWebPartProps {
 }
 
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
-
+  
   public render(): void {
     const siteTitle : string = this.context.pageContext.web.title;
 
