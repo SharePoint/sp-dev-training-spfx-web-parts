@@ -3,9 +3,9 @@
     "plusBeta": false,
     "isCreatingSolution": true,
     "environment": "spo",
-    "version": "1.13.0",
+    "version": "1.13.1",
     "libraryName": "hello-world",
-    "libraryId": "4b726549-31e9-4f4d-86a5-587b764e8f13",
+    "libraryId": "2cc5e187-cd46-432c-8eef-400582eb91fb",
     "packageManager": "npm",
     "isDomainIsolated": false,
     "componentType": "webpart"
