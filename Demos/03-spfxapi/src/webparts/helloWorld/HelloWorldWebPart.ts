@@ -13,6 +13,7 @@ import {
   PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
+import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import { escape } from '@microsoft/sp-lodash-subset';
 
 import styles from './HelloWorldWebPart.module.scss';
@@ -23,6 +24,15 @@ export interface IHelloWorldWebPartProps {
 }
 
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
+
+  private _isDarkTheme: boolean = false;
+  private _environmentMessage: string = '';
+
+  protected onInit(): Promise<void> {
+    this._environmentMessage = this._getEnvironmentMessage();
+
+    return super.onInit();
+  }
 
   public render(): void {
     const siteTitle: string = this.context.pageContext.web.title;
@@ -37,25 +47,26 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
     setTimeout(() => {
       this.context.statusRenderer.clearLoadingIndicator(this.domElement);
       this.domElement.innerHTML = `
-        <div class="${styles.helloWorld}">
-          <div class="${styles.container}">
-            <div class="${styles.row}">
-              <div class="${styles.column}">
-                <span class="${styles.title}">Welcome to SharePoint!</span>
-                <p class="${styles.subTitle}"><strong>Site title:</strong> ${siteTitle}</p>
-                <p class="${styles.subTitle}"><strong>Page mode:</strong> ${pageMode}</p>
-                <p class="${styles.subTitle}"><strong>Environment:</strong> ${environmentType}</p>
-                <p class="${styles.subTitle}">Customize SharePoint experiences using Web Parts.</p>
-                <p class="${styles.description}">${escape(this.properties.description)}</p>
-                <a href="#" class="${styles.button}">
-                  <span class="${styles.label}">Learn more</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>`;
+      <section class="${styles.helloWorld} ${!!this.context.sdks.microsoftTeams ? styles.teams : ''}">
+        <div class="${styles.welcome}">
+          <img alt="" src="${this._isDarkTheme ? require('./assets/welcome-dark.png') : require('./assets/welcome-light.png')}" class="${styles.welcomeImage}" />
+          <h2>Well done, ${escape(this.context.pageContext.user.displayName)}!</h2>
+          <div>${this._environmentMessage}</div>
+          <div>Web part property value: <strong>${escape(this.properties.description)}</strong></div>
+          <div>Site title: <strong>${escape(siteTitle)}</strong></div>
+          <div>Page mode: <strong>${escape(pageMode)}</strong></div>
+          <div>Environment: <strong>${escape(environmentType)}</strong></div>
+        </div>
+        <div>
+          <h3>Welcome to SharePoint Framework!</h3>
+          <p>
+          The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
+          </p>        
+          <button type="button">Show welcome message</button>
+        </div>
+      </section>`;
 
-      this.domElement.getElementsByClassName(`${styles.button}`)[0]
+      this.domElement.getElementsByTagName("button")[0]
         .addEventListener('click', (event: any) => {
           event.preventDefault();
           alert('Welcome to the SharePoint Framework!');
@@ -66,6 +77,29 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
     Log.warn('HelloWorld', 'WARNING message', this.context.serviceScope);
     Log.error('HelloWorld', new Error('Error message'), this.context.serviceScope);
     Log.verbose('HelloWorld', 'VERBOSE message', this.context.serviceScope);
+  }
+
+  private _getEnvironmentMessage(): string {
+    if (!!this.context.sdks.microsoftTeams) { // running in Teams
+      return this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentTeams : strings.AppTeamsTabEnvironment;
+    }
+
+    return this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentSharePoint : strings.AppSharePointEnvironment;
+  }
+
+  protected onThemeChanged(currentTheme: IReadonlyTheme | undefined): void {
+    if (!currentTheme) {
+      return;
+    }
+
+    this._isDarkTheme = !!currentTheme.isInverted;
+    const {
+      semanticColors
+    } = currentTheme;
+    this.domElement.style.setProperty('--bodyText', semanticColors.bodyText);
+    this.domElement.style.setProperty('--link', semanticColors.link);
+    this.domElement.style.setProperty('--linkHovered', semanticColors.linkHovered);
+
   }
 
   protected get dataVersion(): Version {
