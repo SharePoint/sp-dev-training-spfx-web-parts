@@ -1,6 +1,3 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT license.
-
 import {
   Version,
   DisplayMode,
@@ -27,12 +24,6 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
 
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
-
-  protected onInit(): Promise<void> {
-    this._environmentMessage = this._getEnvironmentMessage();
-
-    return super.onInit();
-  }
 
   public render(): void {
     const siteTitle: string = this.context.pageContext.web.title;
@@ -61,13 +52,13 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
           <h3>Welcome to SharePoint Framework!</h3>
           <p>
           The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
-          </p>        
+          </p>
           <button type="button">Show welcome message</button>
         </div>
       </section>`;
 
       this.domElement.getElementsByTagName("button")[0]
-        .addEventListener('click', (event: any) => {
+        .addEventListener('click', (event: MouseEvent) => {
           event.preventDefault();
           alert('Welcome to the SharePoint Framework!');
         });
@@ -78,6 +69,14 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
     Log.error('HelloWorld', new Error('Error message'), this.context.serviceScope);
     Log.verbose('HelloWorld', 'VERBOSE message', this.context.serviceScope);
   }
+
+  protected onInit(): Promise<void> {
+    this._environmentMessage = this._getEnvironmentMessage();
+
+    return super.onInit();
+  }
+
+
 
   private _getEnvironmentMessage(): string {
     if (!!this.context.sdks.microsoftTeams) { // running in Teams
@@ -96,9 +95,12 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
     const {
       semanticColors
     } = currentTheme;
-    this.domElement.style.setProperty('--bodyText', semanticColors.bodyText);
-    this.domElement.style.setProperty('--link', semanticColors.link);
-    this.domElement.style.setProperty('--linkHovered', semanticColors.linkHovered);
+
+    if (semanticColors) {
+      this.domElement.style.setProperty('--bodyText', semanticColors.bodyText || null);
+      this.domElement.style.setProperty('--link', semanticColors.link || null);
+      this.domElement.style.setProperty('--linkHovered', semanticColors.linkHovered || null);
+    }
 
   }
 
