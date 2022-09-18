@@ -2,9 +2,9 @@
   "@microsoft/generator-sharepoint": {
     "plusBeta": false,
     "isCreatingSolution": true,
-    "version": "1.14.0",
+    "version": "1.15.2",
     "libraryName": "hello-world",
-    "libraryId": "c8afea5f-2ed3-42e4-89ca-a743ab21750a",
+    "libraryId": "fc14249b-b45a-4014-8d61-7e42d28aab0c",
     "environment": "spo",
     "packageManager": "npm",
     "solutionName": "HelloWorld",
