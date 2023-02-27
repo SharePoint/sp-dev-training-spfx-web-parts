@@ -1,6 +1,3 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT license.
-
 import {
   Version,
   DisplayMode,
@@ -29,13 +26,14 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
   private _environmentMessage: string = '';
 
   public render(): void {
-    const siteTitle: string = this.context.pageContext.web.title;
     const pageMode: string = (this.displayMode === DisplayMode.Edit)
       ? 'You are in edit mode'
       : 'You are in read mode';
     const environmentType: string = (Environment.type === EnvironmentType.ClassicSharePoint)
       ? 'You are running in a classic page'
       : 'You are running in a modern page';
+
+    const siteTitle: string = this.context.pageContext.web.title;
 
     this.context.statusRenderer.displayLoadingIndicator(this.domElement, "message");
     setTimeout(() => {
@@ -61,32 +59,51 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
       </section>`;
 
       this.domElement.getElementsByTagName("button")[0]
-        .addEventListener('click', (event: MouseEvent) => {
-          event.preventDefault();
-          alert('Welcome to the SharePoint Framework!');
-        });
+      .addEventListener('click', (event: MouseEvent) => {
+        event.preventDefault();
+        alert('Welcome to the SharePoint Framework!');
+      });
     }, 5000);
 
     Log.info('HelloWorld', 'message', this.context.serviceScope);
     Log.warn('HelloWorld', 'WARNING message', this.context.serviceScope);
     Log.error('HelloWorld', new Error('Error message'), this.context.serviceScope);
     Log.verbose('HelloWorld', 'VERBOSE message', this.context.serviceScope);
+
   }
 
   protected onInit(): Promise<void> {
-    this._environmentMessage = this._getEnvironmentMessage();
-
-    return super.onInit();
+    return this._getEnvironmentMessage().then(message => {
+      this._environmentMessage = message;
+    });
   }
 
 
 
-  private _getEnvironmentMessage(): string {
-    if (!!this.context.sdks.microsoftTeams) { // running in Teams
-      return this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentTeams : strings.AppTeamsTabEnvironment;
+  private _getEnvironmentMessage(): Promise<string> {
+    if (!!this.context.sdks.microsoftTeams) { // running in Teams, office.com or Outlook
+      return this.context.sdks.microsoftTeams.teamsJs.app.getContext()
+        .then(context => {
+          let environmentMessage: string = '';
+          switch (context.app.host.name) {
+            case 'Office': // running in Office
+              environmentMessage = this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentOffice : strings.AppOfficeEnvironment;
+              break;
+            case 'Outlook': // running in Outlook
+              environmentMessage = this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentOutlook : strings.AppOutlookEnvironment;
+              break;
+            case 'Teams': // running in Teams
+              environmentMessage = this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentTeams : strings.AppTeamsTabEnvironment;
+              break;
+            default:
+              throw new Error('Unknown host');
+          }
+
+          return environmentMessage;
+        });
     }
 
-    return this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentSharePoint : strings.AppSharePointEnvironment;
+    return Promise.resolve(this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentSharePoint : strings.AppSharePointEnvironment);
   }
 
   protected onThemeChanged(currentTheme: IReadonlyTheme | undefined): void {

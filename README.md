@@ -10,15 +10,15 @@ The lab for this module is available in multiple units within the associated Mic
 
 1. [Exercise - Create a SharePoint Framework client-side web part](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts/3-exercise-create-web-part)
 
-    In this exercise, you'll create a SharePoint Framework client-side web part.
+   In this exercise, you'll create a SharePoint Framework client-side web part.
 
 1. [Exercise - Testing with the SharePoint-hosted Workbench](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts/5-exercise-test-workbench)
 
-    In this exercise, you'll test your web part in the hosted workbench, and you will explore the different modes of the built-in gulp serve task.
+   In this exercise, you'll test your web part in the hosted workbench, and you will explore the different modes of the built-in gulp serve task.
 
 1. [Exercise - Exploring the SharePoint Framework API](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts/7-exercise-api)
 
-    In this exercise, you'll explore a few different APIs available to you in the SharePoint Framework that are useful in many scenarios.
+   In this exercise, you'll explore a few different APIs available to you in the SharePoint Framework that are useful in many scenarios.
 
 ## Demos
 
@@ -32,16 +32,17 @@ This module has been recorded and is available in the SharePoint Development You
 
 ## Contributors
 
-|        Roles         |                                                   Author(s)                                                    |
+| Roles                | Author(s)                                                                                                      |
 | -------------------- | -------------------------------------------------------------------------------------------------------------- |
 | Lab Manuals / Slides | Andrew Connell (Microsoft MVP, [Voitanos](//github.com/voitanos)) [@andrewconnell](//github.com/andrewconnell) |
-| QA                   | Rob Windsor (Microsoft MVP) [@rob-windsor](//github.com/rob-windsor)                               |
+| QA                   | Rob Windsor (Microsoft MVP) [@rob-windsor](//github.com/rob-windsor)                                           |
 | Sponsor / Support    | Vesa Juvonen (Microsoft) [@VesaJuvonen](//github.com/VesaJuvonen)                                              |
 
 ## Version history
 
 | Version |        Date        |                      Comments                      |
 | ------- | ------------------ | -------------------------------------------------- |
+| 1.18    | February 27, 2023  | FY2023Q3 content refresh; update to SPFx v1.16.1   |
 | 1.17    | December 5, 2022   | FY2023Q2 content refresh                           |
 | 1.16    | September 5, 2022  | FY2023Q1 content refresh; update SPFx v1.15.2      |
 | 1.15    | May 2, 2022        | FY2022Q4 content refresh; update SPFx v1.14        |
