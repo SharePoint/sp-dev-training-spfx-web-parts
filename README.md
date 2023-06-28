@@ -2,23 +2,23 @@
 
 This module will introduce you to creating client-side web parts using the SharePoint Framework. In addition, you will see how to leverage the SharePoint-hosted Workbench and use different parts of the SharePoint Framework API.
 
-> This module is also published as a Microsoft Learn module: [Developing with the SharePoint Framework: Web Parts](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts)
+> This module is also published as a Microsoft Learn module: [Developing with the SharePoint Framework: Web Parts](https://learn.microsoft.com/training/modules/sharepoint-spfx-web-parts)
 
 ## Lab - Developing with the SharePoint Framework: Web Parts
 
 The lab for this module is available in multiple units within the associated Microsoft Learn module. Use the following links to jump to the specific unit. Each Microsoft Learn unit represents a different lab exercise & demo in the presentation.
 
-1. [Exercise - Create a SharePoint Framework client-side web part](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts/3-exercise-create-web-part)
+1. [Exercise - Create a SharePoint Framework client-side web part](https://learn.microsoft.com/training/modules/sharepoint-spfx-web-parts/3-exercise-create-web-part)
 
-    In this exercise, you'll create a SharePoint Framework client-side web part.
+   In this exercise, you'll create a SharePoint Framework client-side web part.
 
-1. [Exercise - Testing with the SharePoint-hosted Workbench](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts/5-exercise-test-workbench)
+1. [Exercise - Testing with the SharePoint-hosted Workbench](https://learn.microsoft.com/training/modules/sharepoint-spfx-web-parts/5-exercise-test-workbench)
 
-    In this exercise, you'll test your web part in the hosted workbench, and you will explore the different modes of the built-in gulp serve task.
+   In this exercise, you'll test your web part in the hosted workbench, and you will explore the different modes of the built-in gulp serve task.
 
-1. [Exercise - Exploring the SharePoint Framework API](https://docs.microsoft.com/learn/modules/sharepoint-spfx-web-parts/7-exercise-api)
+1. [Exercise - Exploring the SharePoint Framework API](https://learn.microsoft.com/training/modules/sharepoint-spfx-web-parts/7-exercise-api)
 
-    In this exercise, you'll explore a few different APIs available to you in the SharePoint Framework that are useful in many scenarios.
+   In this exercise, you'll explore a few different APIs available to you in the SharePoint Framework that are useful in many scenarios.
 
 ## Demos
 
@@ -32,16 +32,18 @@ This module has been recorded and is available in the SharePoint Development You
 
 ## Contributors
 
-|        Roles         |                                                   Author(s)                                                    |
+| Roles                | Author(s)                                                                                                      |
 | -------------------- | -------------------------------------------------------------------------------------------------------------- |
 | Lab Manuals / Slides | Andrew Connell (Microsoft MVP, [Voitanos](//github.com/voitanos)) [@andrewconnell](//github.com/andrewconnell) |
-| QA                   | Rob Windsor (Microsoft MVP) [@rob-windsor](//github.com/rob-windsor)                               |
+| QA                   | Rob Windsor (Microsoft MVP) [@rob-windsor](//github.com/rob-windsor)                                           |
 | Sponsor / Support    | Vesa Juvonen (Microsoft) [@VesaJuvonen](//github.com/VesaJuvonen)                                              |
 
 ## Version history
 
-| Version |        Date        |                      Comments                      |
+| Version | Date               | Comments                                           |
 | ------- | ------------------ | -------------------------------------------------- |
+| 1.19    | December 5, 2023   | FY2023Q4 content refresh                           |
+| 1.18    | February 28, 2023  | FY2023Q3 content refresh                           |
 | 1.17    | December 5, 2022   | FY2023Q2 content refresh                           |
 | 1.16    | September 5, 2022  | FY2023Q1 content refresh; update SPFx v1.15.2      |
 | 1.15    | May 2, 2022        | FY2022Q4 content refresh; update SPFx v1.14        |
