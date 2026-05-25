@@ -1,15 +1,13 @@
 {
   "@microsoft/generator-sharepoint": {
+    "useGulp": false,
     "plusBeta": false,
     "isCreatingSolution": true,
-    "nodeVersion": "18.20.4",
-    "sdksVersions": {
-      "@microsoft/microsoft-graph-client": "3.0.2",
-      "@microsoft/teams-js": "2.24.0"
-    },
-    "version": "1.20.0",
+    "nodeVersion": "22.21.1",
+    "sdksVersions": {},
+    "version": "1.22.0-rc.0",
     "libraryName": "hello-world",
-    "libraryId": "50131125-ee04-49ef-ac7a-c338bf64d222",
+    "libraryId": "f760d89d-775c-4913-8530-d9cc1c80ac96",
     "environment": "spo",
     "packageManager": "npm",
     "solutionName": "hello-world",

@@ -8,7 +8,11 @@ Short summary on functionality and used technologies.
 
 ## Used SharePoint Framework Version
 
+<<<<<<< Updated upstream
 ![version](https://img.shields.io/badge/version-1.20.0-green.svg)
+=======
+![version](https://img.shields.io/badge/version-1.22.0--rc.0-yellow.svg)
+>>>>>>> Stashed changes
 
 ## Applies to
 
@@ -46,7 +50,7 @@ Short summary on functionality and used technologies.
 - Ensure that you are at the solution folder
 - in the command-line run:
   - **npm install**
-  - **gulp serve**
+  - **npm run start**
 
 > Include any additional steps as needed.
 

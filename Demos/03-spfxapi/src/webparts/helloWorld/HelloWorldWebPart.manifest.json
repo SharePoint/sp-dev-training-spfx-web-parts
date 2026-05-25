@@ -1,6 +1,10 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+<<<<<<< Updated upstream
   "id": "7b29361b-3aae-4a28-ad07-1fcb750f3f0f",
+=======
+  "id": "7613c728-84cd-4593-b6e3-94646004a0c3",
+>>>>>>> Stashed changes
   "alias": "HelloWorldWebPart",
   "componentType": "WebPart",
 
@@ -18,7 +22,7 @@
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
     "group": { "default": "Advanced" },
-    "title": { "default": "Hello SPFx" },
+    "title": { "default": "HelloWorld" },
     "description": { "default": "My first SPFx web part" },
     "officeFabricIconFontName": "BirthdayCake",
     "properties": {
