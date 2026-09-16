@@ -29,19 +29,15 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
         <div>Web part property value: <strong>${escape(this.properties.description)}</strong></div>
       </div>
       <div>
-        <h3>Welcome to SharePoint Framework!</h3>
-        <p>
-        The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
-        </p>
         <button type="button">Show welcome message</button>
       </div>
     </section>`;
 
     this.domElement.getElementsByTagName("button")[0]
-    .addEventListener('click', (event: MouseEvent) => {
-      event.preventDefault();
-      alert('Welcome to the SharePoint Framework!');
-    });
+      .addEventListener('click', (event: MouseEvent) => {
+        event.preventDefault();
+        alert('Welcome to the SharePoint Framework!');
+      });
   }
 
   protected onInit(): Promise<void> {
